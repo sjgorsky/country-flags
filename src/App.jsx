@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FlagGrid from './components/FlagGrid';
+import CountryModal from './components/CountryModal';
 
 const App = () => {
+  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleFlagClick = (country) => {
+    setSelectedCountry(country);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedCountry(null);
+  };
+
   return (
     <div className="h-screen flex flex-col bg-gray-100">
       <header className="bg-white shadow-sm z-10 flex-shrink-0">
@@ -12,8 +26,13 @@ const App = () => {
         </div>
       </header>
       <main className="flex-1 overflow-hidden">
-        <FlagGrid />
+        <FlagGrid onFlagClick={handleFlagClick} />
       </main>
+      <CountryModal
+        country={selectedCountry}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </div>
   );
 };

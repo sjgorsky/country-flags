@@ -1,13 +1,16 @@
 import React from 'react';
 
-const FlagCard = ({ country }) => {
+const FlagCard = ({ country, onClick }) => {
   // Convert country code to lowercase for flagpedia.net API
   const countryCode = country.code.toLowerCase();
   // Use width-based size from flagpedia.net API (w320 = 320px width, maintains 3:2 aspect ratio)
   const flagUrl = `https://flagcdn.com/w320/${countryCode}.png`;
 
   return (
-    <div className="group relative w-full h-full overflow-hidden">
+    <div 
+      className="group relative w-full h-full overflow-hidden cursor-pointer"
+      onClick={() => onClick(country)}
+    >
       <img
         src={flagUrl}
         alt={`Flag of ${country.name}`}

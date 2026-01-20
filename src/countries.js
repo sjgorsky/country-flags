@@ -5,7 +5,6 @@ export const countries = [
   { code: 'AF', name: 'Afghanistan' },
   { code: 'AG', name: 'Antigua and Barbuda' },
   { code: 'AI', name: 'Anguilla' },
-  { code: 'AK', name: 'Abkhazia' },
   { code: 'AL', name: 'Albania' },
   { code: 'AM', name: 'Armenia' },
   { code: 'AO', name: 'Angola' },
