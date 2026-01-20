@@ -5,8 +5,6 @@ A single-page web application featuring a scrollable grid of country flags using
 ## Features
 
 - 🏳️ Display of all supported country flags
-- 🎨 Two flag styles: Flat and Shiny
-- 📏 Multiple flag sizes: 16px, 24px, 32px, 48px, 64px
 - 📱 Responsive grid layout
 - ⚡ Built with React 18.3 and Vite
 - 🎯 Modern UI with Tailwind CSS
